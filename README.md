@@ -68,8 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# practice_storybook
 
-### 起動
+
+### storybook
+###### 参考
+[React 向け Storybook のチュートリアル](https://www.learnstorybook.com/intro-to-storybook/react/ja/get-started/)
+
+###### ターミナルでテストランナー (Jest) を開始する:
+yarn test --watchAll
+
+###### ポート 6006 でコンポーネントエクスプローラーを起動する:
 yarn storybook
 
+###### ポート 3000 でフロントエンドアプリケーションを起動する:
+yarn start
+
+###### スナップショット
+yarn add -D @storybook/addon-storyshots react-test-renderer
+
+// src/storybook.test.js
+import initStoryshots from '@storybook/addon-storyshots';
+initStoryshots();
+
+yarn test
